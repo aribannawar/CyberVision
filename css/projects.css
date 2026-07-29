@@ -1,0 +1,225 @@
+.projects-hub{
+
+    padding:170px 70px 90px;
+
+}
+
+.hub-header{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.hub-header h1{
+
+    font-size:58px;
+
+    color:#00E5FF;
+
+    letter-spacing:5px;
+
+    text-shadow:
+        0 0 12px #00E5FF,
+        0 0 28px rgba(0,229,255,.45);
+
+}
+
+.hub-header p{
+
+    margin-top:18px;
+
+    color:#9CA3AF;
+
+    font-size:18px;
+
+}
+
+.hub-icon{
+
+    font-size:62px;
+
+    color:#00E5FF;
+
+    margin-bottom:25px;
+
+    transition:.4s;
+
+    text-shadow:
+        0 0 12px rgba(0,229,255,.45);
+
+}
+
+.hub-card:hover .hub-icon{
+
+    transform:rotate(10deg) scale(1.15);
+
+    color:#7DF9FF;
+
+    text-shadow:
+        0 0 18px #00E5FF,
+        0 0 35px rgba(0,229,255,.55);
+
+}
+
+.hub-status{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-top:20px;
+
+    color:#00FF99;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-shadow:
+        0 0 10px rgba(0,255,153,.55);
+
+}
+
+.status-dot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#00FF99;
+
+    box-shadow:
+        0 0 12px #00FF99;
+
+    animation:statusPulse 1.2s infinite;
+
+}
+
+.hub-header h4{
+
+    margin-top:18px;
+
+    color:#B8C7D6;
+
+    font-size:18px;
+
+    font-weight:500;
+
+    letter-spacing:1px;
+
+}
+
+@keyframes statusPulse{
+
+    0%{
+
+        opacity:.4;
+
+        transform:scale(.8);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.25);
+
+    }
+
+    100%{
+
+        opacity:.4;
+
+        transform:scale(.8);
+
+    }
+
+}
+
+.hub-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+
+.hub-card{
+
+    background:rgba(17,24,39,.72);
+
+    border:1px solid rgba(0,229,255,.20);
+
+    border-radius:20px;
+
+    padding:45px 35px;
+
+    text-decoration:none;
+
+    backdrop-filter:blur(16px);
+
+    transition:.35s;
+
+}
+
+.hub-card:hover{
+
+    transform:translateY(-10px) scale(1.02);
+
+    border-color:#00E5FF;
+
+    box-shadow:
+        0 0 22px rgba(0,229,255,.40);
+
+}
+
+.hub-icon{
+
+    font-size:60px;
+
+    margin-bottom:25px;
+
+}
+
+.hub-card h2{
+
+    color:#00E5FF;
+
+    margin-bottom:12px;
+
+    letter-spacing:2px;
+
+}
+
+.hub-card h4{
+
+    color:#C8D5E2;
+
+    font-weight:500;
+
+    margin-bottom:35px;
+
+}
+
+.hub-card span{
+
+    color:#00FF99;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+}

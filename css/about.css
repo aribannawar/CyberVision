@@ -1,0 +1,220 @@
+/* ===========================
+        ABOUT PAGE
+=========================== */
+
+.about-section{
+
+    padding:170px 8% 100px;
+
+    max-width:1400px;
+
+    margin:auto;
+
+}
+
+.about-header{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.about-header h2{
+
+    font-size:52px;
+
+    color:#00E5FF;
+
+    letter-spacing:5px;
+
+    text-shadow:
+        0 0 10px #00E5FF,
+        0 0 30px #00E5FF;
+
+}
+
+.about-header p{
+
+    margin-top:18px;
+
+    color:#9CA3AF;
+
+    font-size:18px;
+
+}
+
+/* ===================== */
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+
+    gap:35px;
+
+}
+
+/* ===================== */
+
+.about-card{
+
+    background:rgba(17,24,39,.60);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(0,229,255,.25);
+
+    border-radius:22px;
+
+    padding:35px;
+
+    transition:.35s ease;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* glowing border */
+
+.about-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        130deg,
+        transparent,
+        rgba(0,229,255,.12),
+        transparent
+    );
+
+    transform:translateX(-100%);
+
+    transition:.6s;
+
+}
+
+.about-card:hover::before{
+
+    transform:translateX(100%);
+
+}
+
+.about-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#00E5FF;
+
+    box-shadow:
+        0 0 18px rgba(0,229,255,.45),
+        0 0 45px rgba(0,229,255,.18);
+
+}
+
+/* ===================== */
+
+.about-card h3{
+
+    color:#00E5FF;
+
+    margin-bottom:25px;
+
+    font-size:28px;
+
+    text-shadow:0 0 12px #00E5FF;
+
+}
+
+.about-card p{
+
+    color:#D7E3F4;
+
+    line-height:1.9;
+
+    margin-bottom:14px;
+
+}
+
+.about-card strong{
+
+    color:#00E5FF;
+
+}
+
+.about-card ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin-top:18px;
+
+}
+
+.about-card li{
+
+    padding:10px 0;
+
+    color:#D7E3F4;
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+    transition:.3s;
+
+}
+
+.about-card li:hover{
+
+    color:#00E5FF;
+
+    transform:translateX(10px);
+
+}
+
+.online{
+
+    color:#00FF99;
+
+    font-weight:bold;
+
+    text-shadow:0 0 10px #00FF99;
+
+}
+
+/* ===================== */
+
+@media(max-width:768px){
+
+.about-section{
+
+padding:150px 20px 80px;
+
+}
+
+.about-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.about-header h2{
+
+font-size:42px;
+
+}
+
+.about-card{
+
+padding:28px;
+
+}
+
+}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard • CyberVision</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/logo.css">
+<link rel="stylesheet" href="css/dash.css">
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Matrix Background -->
+<canvas id="matrix-bg"></canvas>
+
+<!-- Grid -->
+<div id="particles"></div>
+
+<!-- Developer Bar -->
+<div class="developer-bar">
+
+<h1>
+👨🏻‍💻 Developed by <strong>Ariban Nawar</strong>
+</h1>
+
+</div>
+
+<!-- ===========================
+        NAVBAR
+=========================== -->
+
+<nav class="navbar">
+
+<div class="logo">
+
+<div class="cyber-logo">
+
+<svg viewBox="0 0 100 100">
+
+<circle class="outer-ring"
+cx="50"
+cy="50"
+r="36"/>
+
+<circle class="inner-ring"
+cx="50"
+cy="50"
+r="24"/>
+
+<circle class="core"
+cx="50"
+cy="50"
+r="3"/>
+
+</svg>
+
+</div>
+
+<span class="logo-text">
+Version3
+</span>
+
+</div>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="dashboard.html">Dashboard</a></li>
+
+<li><a href="projects.html">Projects</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<!-- ===========================
+        DASHBOARD
+=========================== -->
+
+<section class="dashboard-page">
+
+<div class="dashboard-title">
+
+<h1>CYBER DASHBOARD</h1>
+
+<p>
+Live Security Monitoring Center
+</p>
+
+</div>
+
+<div class="status-bar">
+
+<div class="status-dot"></div>
+
+<span>SYSTEM STATUS : ONLINE</span>
+
+</div>
+
+<!-- Cards -->
+
+<div class="dashboard-grid">
+
+<div class="status-card">
+
+<h3>CPU</h3>
+
+<h2 id="cpu-value">19%</h2>
+
+</div>
+
+<div class="status-card">
+
+<h3>MEMORY</h3>
+
+<h2 id="memory-value">6.9 GB</h2>
+
+</div>
+
+<div class="status-card">
+
+<h3>NETWORK</h3>
+
+<h2>ONLINE</h2>
+
+</div>
+
+<div class="status-card">
+
+<h3>UPTIME</h3>
+
+<h2>12h 42m</h2>
+
+</div>
+
+</div>
+
+<!-- Threat -->
+
+<div class="threat-panel">
+
+<h2>
+Threat Monitor
+</h2>
+
+<div class="threat-bar">
+
+<div class="threat-fill"></div>
+
+</div>
+
+<p>
+
+Threat Level :
+<span class="safe">
+
+LOW
+
+</span>
+
+</p>
+
+</div>
+
+<!-- Terminal -->
+
+<div class="dashboard-terminal">
+
+<div class="terminal-header">
+
+<span class="red"></span>
+
+<span class="yellow"></span>
+
+<span class="green"></span>
+
+</div>
+
+<div id="dashboard-console">
+
+</div>
+
+</div>
+
+<!-- Logs -->
+
+<div class="activity-box">
+
+<h2>
+
+Recent Activity
+
+</h2>
+
+<div id="live-log">
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<h3>
+
+Connect With Me
+
+</h3>
+
+<div class="social-links">
+
+<a href="https://www.facebook.com/Ethicalnawar"><i class="fab fa-facebook-f"></i></a>
+
+<a href="https://www.instagram.com/nawar20082026"><i class="fab fa-instagram"></i></a>
+
+<a href="https://www.twitter.com/cyberwhitenawar"><i class="fab fa-x-twitter"></i></a>
+
+<a href="https://t.me/cyberwhitenawar"><i class="fab fa-telegram-plane"></i></a>
+
+<a href="https://www.github.com/ethicalraisa-web"><i class="fab fa-github"></i></a>
+
+</div>
+
+<p>
+
+© 2026 Ariban Nawar
+
+</p>
+
+</footer>
+
+<script src="js/matrix.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

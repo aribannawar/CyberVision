@@ -1,0 +1,14 @@
+/* Matrix */
+#matrixCanvas{
+    position:fixed;
+    inset:0;
+
+    z-index:-4;
+
+    opacity:.75;
+}
+
+/* Grid */
+#particles{
+    z-index:-3;
+}

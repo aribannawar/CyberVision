@@ -1,0 +1,113 @@
+/* ===========================
+      Launch Dashboard Button
+=========================== */
+
+.launch-btn{
+
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:16px 42px;
+
+    background:linear-gradient(135deg,#00E5FF,#009DFF);
+
+    color:#050816 !important;
+
+    text-decoration:none !important;
+
+    border:2px solid rgba(0,229,255,.65);
+
+    border-radius:14px;
+
+    font-size:18px;
+    font-weight:700;
+    letter-spacing:1px;
+
+    cursor:pointer;
+
+    transition:all .35s ease;
+
+    box-shadow:
+        0 0 12px rgba(0,229,255,.35),
+        0 0 28px rgba(0,229,255,.18);
+
+    position:relative;
+    overflow:hidden;
+
+    animation:launchPulse 3s infinite;
+
+}
+
+/* Shine animation */
+
+.launch-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:60%;
+    height:100%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.55),
+        transparent
+    );
+
+    transition:.8s;
+
+}
+
+.launch-btn:hover::before{
+
+    left:150%;
+
+}
+
+.launch-btn:hover{
+
+    transform:translateY(-5px) scale(1.04);
+
+    box-shadow:
+        0 0 15px #00E5FF,
+        0 0 35px rgba(0,229,255,.75),
+        0 0 55px rgba(0,229,255,.35);
+
+}
+
+.launch-btn:active{
+
+    transform:scale(.97);
+
+}
+
+@keyframes launchPulse{
+
+0%{
+
+box-shadow:
+0 0 10px rgba(0,229,255,.25);
+
+}
+
+50%{
+
+box-shadow:
+0 0 24px rgba(0,229,255,.65);
+
+}
+
+100%{
+
+box-shadow:
+0 0 10px rgba(0,229,255,.25);
+
+}
+
+}

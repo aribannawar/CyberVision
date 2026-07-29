@@ -1,0 +1,149 @@
+.terminal{
+
+    width:100%;
+
+    max-width:850px;
+
+    min-height:420px;
+
+    background:#0b0f19;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(0,229,255,.25);
+
+    box-shadow:
+        0 0 35px rgba(0,229,255,.18);
+
+}
+
+.terminal-header{
+
+    height:45px;
+
+    background:#171d2d;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding-left:18px;
+
+}
+
+.red,
+.yellow,
+.green{
+
+width:12px;
+height:12px;
+
+border-radius:50%;
+
+animation:statusPulse 2.4s infinite;
+
+}
+
+.red{
+
+background:#ff5f56;
+
+box-shadow:0 0 10px rgba(255,95,86,.7);
+
+animation-delay:0s;
+
+}
+
+.yellow{
+
+background:#ffbd2e;
+
+box-shadow:0 0 10px rgba(255,189,46,.7);
+
+animation-delay:.5s;
+
+}
+
+.green{
+
+background:#27c93f;
+
+box-shadow:0 0 12px rgba(39,201,63,.8);
+
+animation-delay:1s;
+
+}
+
+@keyframes statusPulse{
+
+0%{
+
+transform:scale(1);
+
+filter:brightness(.8);
+
+}
+
+50%{
+
+transform:scale(1.25);
+
+filter:brightness(1.4);
+
+}
+
+100%{
+
+transform:scale(1);
+
+filter:brightness(.8);
+
+}
+
+}
+
+#console{
+
+    padding:16px;
+
+    height:375px;
+
+    overflow-y:auto;
+
+    font-family:"JetBrains Mono",monospace;
+
+    font-size:15px;
+
+}
+
+.terminal-row{
+
+    display:grid;
+
+    grid-template-columns:95px 1fr;
+
+    gap:12px;
+
+    margin-bottom:10px;
+
+}
+
+.terminal-time{
+
+    color:#00E5FF;
+
+    font-weight:bold;
+
+}
+
+.terminal-message{
+
+    color:#00FF99;
+
+    text-shadow:0 0 8px rgba(0,255,153,.35);
+
+}

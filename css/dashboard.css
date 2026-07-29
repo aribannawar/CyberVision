@@ -1,0 +1,50 @@
+/* ===========================
+      Dashboard Grid
+=========================== */
+
+.dashboard{
+
+  display:grid;
+
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+
+  gap:20px;
+
+  padding:80px;
+
+}
+
+.card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        135deg,
+        transparent,
+        rgba(0,229,255,.08),
+        transparent
+    );
+
+    transform:translateX(-100%);
+
+    transition:1s;
+
+}
+
+.card:hover::before{
+
+    transform:translateX(100%);
+
+}

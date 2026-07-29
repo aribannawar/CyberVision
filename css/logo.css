@@ -1,0 +1,155 @@
+/* ===========================
+        CyberVision Logo
+=========================== */
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+.cyber-logo{
+
+width:42px;
+
+height:42px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.cyber-logo svg{
+
+width:100%;
+
+height:100%;
+
+overflow:visible;
+
+}
+
+/* ---------- Outer Ring ---------- */
+
+.outer-ring{
+
+fill:none;
+
+stroke:#00E5FF;
+
+stroke-width:2;
+
+stroke-linecap:round;
+
+stroke-dasharray:120 45;
+
+filter:drop-shadow(0 0 8px rgba(0,229,255,.5));
+
+transform-origin:center;
+
+animation:rotateLeft 10s linear infinite;
+
+}
+
+/* ---------- Inner Ring ---------- */
+
+.inner-ring{
+
+fill:none;
+
+stroke:#00BFFF;
+
+stroke-width:2;
+
+stroke-linecap:round;
+
+stroke-dasharray:60 25;
+
+filter:drop-shadow(0 0 6px rgba(0,191,255,.4));
+
+transform-origin:center;
+
+animation:rotateRight 6s linear infinite;
+
+}
+
+/* ---------- Center ---------- */
+
+.core{
+
+fill:#00E5FF;
+
+filter:drop-shadow(0 0 10px #00E5FF);
+
+animation:pulseCore 2.5s ease-in-out infinite;
+
+}
+
+/* ---------- Animations ---------- */
+
+@keyframes rotateLeft{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(-360deg);
+
+}
+
+}
+
+@keyframes rotateRight{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+@keyframes pulseCore{
+
+0%{
+
+opacity:.6;
+
+transform:scale(.8);
+
+}
+
+50%{
+
+opacity:1;
+
+transform:scale(1.2);
+
+}
+
+100%{
+
+opacity:.6;
+
+transform:scale(.8);
+
+}
+
+}

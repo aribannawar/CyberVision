@@ -1,0 +1,217 @@
+.contact-section{
+
+padding:170px 70px 80px;
+
+}
+
+.contact-title{
+
+text-align:center;
+
+margin-bottom:60px;
+
+}
+
+.contact-title h1{
+
+font-size:55px;
+
+letter-spacing:4px;
+
+color:#00E5FF;
+
+text-shadow:
+
+0 0 12px #00E5FF,
+
+0 0 30px rgba(0,229,255,.45);
+
+}
+
+.contact-title p{
+
+margin-top:15px;
+
+color:#9CA3AF;
+
+font-size:18px;
+
+}
+
+.contact-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:35px;
+
+margin-top:50px;
+
+}
+
+.contact-panel{
+
+background:rgba(17,24,39,.72);
+
+border:1px solid rgba(0,229,255,.22);
+
+border-radius:18px;
+
+padding:35px;
+
+backdrop-filter:blur(16px);
+
+transition:.35s;
+
+}
+
+.contact-panel:hover{
+
+transform:translateY(-8px);
+
+box-shadow:
+
+0 0 18px rgba(0,229,255,.35);
+
+}
+
+.contact-panel h2{
+
+margin-bottom:35px;
+
+color:#00E5FF;
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+}
+
+.contact-card p{
+
+color:#D1D5DB;
+
+line-height:1.8;
+
+}
+
+.info-row{
+
+display:flex;
+
+justify-content:space-between;
+
+padding:16px 0;
+
+border-bottom:1px solid rgba(255,255,255,.06);
+
+}
+
+.info-row span{
+
+color:#8FA4B8;
+
+}
+
+.info-row strong{
+
+color:#EAF6FF;
+
+}
+
+.status-box{
+
+margin-top:35px;
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+font-weight:700;
+
+color:#00FF99;
+
+}
+
+.live-dot{
+
+width:12px;
+
+height:12px;
+
+border-radius:50%;
+
+background:#00FF99;
+
+box-shadow:
+
+0 0 10px #00FF99;
+
+animation:livePulse 1.2s infinite;
+
+}
+
+@keyframes livePulse{
+
+0%{
+
+opacity:.35;
+
+transform:scale(.8);
+
+}
+
+50%{
+
+opacity:1;
+
+transform:scale(1.2);
+
+}
+
+100%{
+
+opacity:.35;
+
+transform:scale(.8);
+
+}
+
+}
+
+.terminal-panel{
+
+background:#0B1220;
+
+border-radius:18px;
+
+overflow:hidden;
+
+border:1px solid rgba(0,229,255,.25);
+
+box-shadow:
+
+0 0 18px rgba(0,229,255,.22);
+
+}
+
+#contact-terminal{
+
+padding:25px;
+
+font-family:"JetBrains Mono",monospace;
+
+font-size:15px;
+
+line-height:1.9;
+
+color:#00FF99;
+
+min-height:340px;
+
+}

@@ -1,0 +1,41 @@
+/* ===========================
+        MOBILE HERO
+=========================== */
+
+@media (max-width:768px){
+
+.hero{
+
+    flex-direction:column;
+
+    padding:140px 20px 60px;
+
+    gap:40px;
+
+}
+
+.hero-left,
+.hero-right{
+
+    width:100%;
+
+}
+
+.hero-right{
+
+    display:flex;
+    justify-content:center;
+
+}
+
+.terminal{
+
+    width:100% !important;
+
+    max-width:100% !important;
+
+    min-height:430px;
+
+}
+
+}

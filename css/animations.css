@@ -1,0 +1,103 @@
+/* Floating Animation */
+
+@keyframes floating{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+.card{
+
+animation:floating 4s ease-in-out infinite;
+
+}
+
+
+/* Neon Glow */
+
+@keyframes glow{
+
+0%{
+
+box-shadow:0 0 15px rgba(0,229,255,.2);
+
+}
+
+50%{
+
+box-shadow:0 0 35px rgba(0,229,255,.6);
+
+}
+
+100%{
+
+box-shadow:0 0 15px rgba(0,229,255,.2);
+
+}
+
+}
+
+@media (max-width:768px){
+
+.hero{
+    flex-direction:column;
+}
+
+.terminal{
+    max-width:100%;
+    height:340px;
+}
+
+}
+
+.terminal{
+
+animation:glow 3s infinite;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.hero,
+
+.dashboard,
+
+.activity-feed{
+
+animation:fadeUp 1s ease;
+
+}

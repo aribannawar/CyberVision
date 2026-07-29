@@ -1,0 +1,176 @@
+/* Global Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+--background:#050816;
+
+--card:#111827;
+
+--cyan:#00E5FF;
+
+--green:#00FF99;
+
+--purple:#8A2BE2;
+
+--danger:#FF4D6D;
+
+--text:#FFFFFF;
+
+}
+
+body{
+
+margin:0;
+
+background:var(--background);
+
+color:var(--text);
+
+font-family:Arial,Helvetica,sans-serif;
+
+overflow-x:hidden;
+
+}
+
+/* Smooth Scrolling */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+#particles{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-2;
+
+    background:
+
+    linear-gradient(rgba(0,229,255,.04) 1px,transparent 1px),
+
+    linear-gradient(90deg,rgba(0,229,255,.04) 1px,transparent 1px);
+
+    background-size:40px 40px;
+
+}
+
+.activity-title{
+    color:#C7F7FF;
+    font-weight:700;
+}
+
+.activity-log{
+    color:#A9B7C6;
+    font-family:"JetBrains Mono",monospace;
+    line-height:1.8;
+}
+
+.activity-log span{
+    color:#00E5FF;
+}
+
+/* =========================
+      Mobile Responsive
+========================= */
+
+@media (max-width:768px){
+
+.hero{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    gap:40px;
+    padding:40px 20px;
+}
+
+.hero-left,
+.hero-right{
+    width:100%;
+}
+
+}
+
+/* ===========================
+        SOCIAL LINKS
+=========================== */
+
+.social-links{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:22px;
+    margin-top:25px;
+}
+
+.social-links a{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    width:55px;
+    height:55px;
+
+    border:2px solid #00E5FF;
+    border-radius:50%;
+
+    text-decoration:none;
+
+    background:rgba(0,229,255,.05);
+
+    transition:.35s ease;
+
+    box-shadow:0 0 12px rgba(0,229,255,.25);
+}
+
+.social-links a i{
+    color:#00E5FF !important;
+    font-size:26px;
+    transition:.35s;
+}
+
+.social-links a:hover{
+    transform:translateY(-6px) scale(1.1);
+
+    background:#00E5FF;
+
+    box-shadow:
+        0 0 15px #00E5FF,
+        0 0 35px #00E5FF;
+}
+
+.social-links a:hover i{
+    color:#050816 !important;
+}
+
+@keyframes pulse{
+
+0%{
+box-shadow:0 0 8px rgba(0,229,255,.3);
+}
+
+50%{
+box-shadow:0 0 22px rgba(0,229,255,.7);
+}
+
+100%{
+box-shadow:0 0 8px rgba(0,229,255,.3);
+}
+
+}
+
+.social-links a{
+animation:pulse 3s infinite;
+}

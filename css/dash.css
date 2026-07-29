@@ -1,0 +1,346 @@
+/* ===========================
+      DASHBOARD PAGE
+=========================== */
+
+.dashboard-page{
+
+    padding:150px 8% 80px;
+
+    max-width:1400px;
+
+    margin:auto;
+
+}
+
+.dashboard-title{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.dashboard-title h1{
+
+    font-size:52px;
+
+    color:#00E5FF;
+
+    letter-spacing:4px;
+
+    text-shadow:
+    0 0 15px #00E5FF,
+    0 0 35px rgba(0,229,255,.5);
+
+}
+
+.dashboard-title p{
+
+    color:#9CA3AF;
+
+    margin-top:12px;
+
+    font-size:18px;
+
+}
+
+/* ===========================
+        STATUS BAR
+=========================== */
+
+.status-bar{
+
+    width:fit-content;
+
+    margin:0 auto 40px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:12px 24px;
+
+    border:1px solid rgba(0,229,255,.3);
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.03);
+
+    backdrop-filter:blur(18px);
+
+}
+
+.status-dot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#00FF99;
+
+    box-shadow:0 0 15px #00FF99;
+
+    animation:pulseStatus 1.4s infinite;
+
+}
+
+@keyframes pulseStatus{
+
+0%{transform:scale(1);}
+
+50%{transform:scale(1.35);}
+
+100%{transform:scale(1);}
+
+}
+
+/* ===========================
+      GRID
+=========================== */
+
+.dashboard-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:28px;
+
+    margin-bottom:45px;
+
+}
+
+/* ===========================
+      CARD
+=========================== */
+
+.status-card{
+
+    padding:35px;
+
+    border-radius:22px;
+
+    background:rgba(17,24,39,.65);
+
+    border:1px solid rgba(0,229,255,.22);
+
+    backdrop-filter:blur(18px);
+
+    transition:.35s;
+
+    box-shadow:
+    0 0 15px rgba(0,229,255,.12);
+
+}
+
+.status-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#00E5FF;
+
+    box-shadow:
+    0 0 18px #00E5FF,
+    0 0 45px rgba(0,229,255,.35);
+
+}
+
+.status-card h3{
+
+    color:#9CA3AF;
+
+    font-size:18px;
+
+    margin-bottom:18px;
+
+}
+
+.status-card h2{
+
+    font-size:52px;
+
+    color:#00E5FF;
+
+    text-shadow:
+    0 0 15px rgba(0,229,255,.45);
+
+}
+
+/* ===========================
+      THREAT
+=========================== */
+
+.threat-panel{
+
+    padding:35px;
+
+    margin-bottom:40px;
+
+    border-radius:22px;
+
+    background:rgba(17,24,39,.65);
+
+    border:1px solid rgba(0,229,255,.25);
+
+}
+
+.threat-panel h2{
+
+    color:#00E5FF;
+
+    margin-bottom:22px;
+
+}
+
+.threat-bar{
+
+    width:100%;
+
+    height:16px;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    background:#101827;
+
+}
+
+.threat-fill{
+
+    width:18%;
+
+    height:100%;
+
+    border-radius:12px;
+
+    background:linear-gradient(90deg,#00FF99,#00E5FF);
+
+    animation:threatMove 3s infinite alternate;
+
+}
+
+@keyframes threatMove{
+
+from{
+
+width:12%;
+
+}
+
+to{
+
+width:28%;
+
+}
+
+}
+
+.safe{
+
+    color:#00FF99;
+
+    font-weight:bold;
+
+}
+
+/* ===========================
+      TERMINAL
+=========================== */
+
+.dashboard-terminal{
+
+    margin:45px 0;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    background:#080C17;
+
+    border:1px solid rgba(0,229,255,.25);
+
+    box-shadow:
+    0 0 25px rgba(0,229,255,.15);
+
+}
+
+.dashboard-terminal #dashboard-console{
+
+    padding:30px;
+
+    min-height:260px;
+
+    color:#00FF99;
+
+    font-family:"JetBrains Mono",monospace;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+/* ===========================
+        LIVE LOGS
+=========================== */
+
+.activity-box{
+
+    padding:35px;
+
+    border-radius:22px;
+
+    background:rgba(17,24,39,.65);
+
+    border:1px solid rgba(0,229,255,.22);
+
+}
+
+.activity-box h2{
+
+    color:#00E5FF;
+
+    margin-bottom:22px;
+
+}
+
+#live-log{
+
+    color:#AEB7C5;
+
+    font-family:"JetBrains Mono",monospace;
+
+    line-height:2;
+
+}
+
+/* ===========================
+      MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.dashboard-page{
+
+padding:140px 20px 60px;
+
+}
+
+.dashboard-title h1{
+
+font-size:40px;
+
+}
+
+.status-card h2{
+
+font-size:40px;
+
+}
+
+}

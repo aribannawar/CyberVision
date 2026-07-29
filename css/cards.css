@@ -1,0 +1,73 @@
+.card{
+
+    background:var(--card);
+
+    color:var(--text);
+
+    border:1px solid var(--cyan);
+
+}
+
+/* cards.css */
+
+.card{
+
+    padding:30px;
+
+    background:rgba(17,24,39,.55);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(0,229,255,.25);
+
+    border-radius:18px;
+
+    transition:.35s;
+
+    box-shadow:
+
+        0 0 20px rgba(0,229,255,.15);
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#00E5FF;
+
+    box-shadow:
+
+        0 0 40px rgba(0,229,255,.4);
+
+}
+
+.card h3{
+
+    color:#9ca3af;
+
+}
+
+.card h1{
+
+    color:#00E5FF;
+
+    font-size:40px;
+
+}
+
+/* cards.css */
+
+.glass{
+
+    background:rgba(17,24,39,.55);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(0,229,255,.3);
+
+    box-shadow:0 0 25px rgba(0,229,255,.25);
+
+    border-radius:20px;
+
+}
