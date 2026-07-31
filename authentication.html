@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CyberVision Authentication</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/logo.css">
+<link rel="stylesheet" href="css/matrix.css">
+<link rel="stylesheet" href="css/authentication.css">
+
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+
+</head>
+
+<body>
+
+<canvas id="matrixCanvas"></canvas>
+
+<div id="particles"></div>
+
+<div
+    id="g_id_onload"
+    data-client_id="889038691588-fcohm9d9uhfdflhqf50fhk2o9dhoc1a6.apps.googleusercontent.com"
+    data-callback="handleCredentialResponse"
+    data-auto_prompt="false">
+</div>
+
+<!-- Google OAuth -->
+
+<div class="auth-container">
+
+    <!-- Header -->
+
+    <div class="auth-header">
+
+        <div class="logo">
+
+            <div class="cyber-logo">
+
+                <svg viewBox="0 0 100 100">
+
+                    <circle class="outer-ring"
+                        cx="50"
+                        cy="50"
+                        r="36"/>
+
+                    <circle class="inner-ring"
+                        cx="50"
+                        cy="50"
+                        r="24"/>
+
+                    <circle class="core"
+                        cx="50"
+                        cy="50"
+                        r="3"/>
+
+                </svg>
+
+            </div>
+
+            <span class="logo-text">
+
+                CYBERVISION
+
+            </span>
+
+        </div>
+
+        <div class="status">
+
+            🟢 Authenticating
+
+        </div>
+
+    </div>
+
+    <!-- Card -->
+
+    <div class="auth-card">
+
+        <div class="profile">
+
+            <img
+                id="user-photo"
+                src="images/avatar.png"
+                alt="Profile">
+
+            <div>
+
+                <h2 id="username">
+
+                    Guest Operator
+
+                </h2>
+
+                <p>
+
+                    access • granted
+
+                </p>
+
+            </div>
+
+            <h1 id="percent">
+
+                0%
+
+            </h1>
+
+        </div>
+
+        <!-- Google Sign In Button -->
+
+       <div
+    class="g_id_signin"
+    data-type="standard"
+    data-theme="filled_blue"
+    data-size="large"
+    data-shape="pill"
+    data-text="continue_with"
+    data-logo_alignment="left"
+    data-width="320">
+</div>
+            
+            
+        <!-- Progress -->
+
+        <div class="progress">
+
+            <div id="progress-fill"></div>
+
+        </div>
+
+        <!-- Steps -->
+
+        <div id="steps"></div>
+
+    </div>
+
+    <!-- Console -->
+
+    <div class="console">
+
+        <div class="console-header">
+
+            CONSOLE.LOG
+
+        </div>
+
+        <div id="console-log"></div>
+
+    </div>
+
+</div>
+
+<script src="js/google.js"></script>
+<script src="js/authentication.js"></script>
+<script src="js/matrix.js"></script>
+
+</body>
+
+</html>

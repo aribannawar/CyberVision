@@ -3,64 +3,47 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<title>CyberVision</title>
 
-    <title>Cyber Software</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/developer.css">
-    <link rel="stylesheet" href="css/logo.css">
-    <link rel="stylesheet" href="css/matrix.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/launch.css">
-    <link rel="stylesheet" href="css/hero.css">
-    <link rel="stylesheet" href="css/cards.css">
-    <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="stylesheet" href="css/widgets.css">
-    <link rel="stylesheet" href="css/terminal.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/boot.css">
-    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/logo.css">
+<link rel="stylesheet" href="css/matrix.css">
+<link rel="stylesheet" href="css/boot.css">
 
 </head>
 
 <body>
 
-    <!-- ==========================
-        Boot Screen
-     ========================== -->
+<canvas id="matrix-bg"></canvas>
 
+<div id="particles"></div>
+
+<!-- ==========================
+        Boot Screen
+========================== -->
 <div id="boot-screen">
 
     <div class="boot-container">
 
-    <h1 class="boot-title">
-
-    <div class="logo">
+    <div class="boot-logo">
 
     <div class="cyber-logo">
 
         <svg viewBox="0 0 100 100">
 
-            <!-- Outer Ring -->
             <circle class="outer-ring"
                 cx="50"
                 cy="50"
                 r="36"/>
 
-            <!-- Inner Ring -->
             <circle class="inner-ring"
                 cx="50"
                 cy="50"
                 r="24"/>
 
-            <!-- Center Dot -->
             <circle class="core"
                 cx="50"
                 cy="50"
@@ -70,307 +53,36 @@
 
     </div>
 
-    <span class="logo-text">
+    <h1 class="logo-text">
         CYBERVISION
-    </span>
+    </h1>
 
 </div>
-      
-</h1>
-     
-        <p>Ultimate All-in-one Security Framework softwares</p>
 
-        <div class="boot-progress">
+<h3>
+    Ultimate All-in-one Security Frameworks
+</h3>
 
-            <div id="boot-fill"></div>
+<div class="boot-progress">
+    <div id="boot-fill"></div>
+</div>
 
-        </div>
-
-        <div id="boot-log">
-
-            Booting Secure Environment...
-
-        </div>
+<div id="boot-log">
+    Booting Secure Environment...
+</div>
 
     </div>
 
 </div>
 
-
-    <!-- Animated Background -->
-
-    <div id="particles"></div>
-    
-    <canvas id="matrixCanvas"></canvas>
-    
-    <div class="developer-bar">
-
-<span>
-
-👩🏻‍💻 Developed by
-
-<strong>Ariban Nawar</strong>
-
-</span>
-
-</div>
-
-
-    <!-- ===========================
-            Navigation Bar
-    ============================ -->
-
-    <nav class="navbar">
-
-<div class="logo">
-
-    <div class="cyber-logo">
-
-        <svg viewBox="0 0 100 100">
-
-            <!-- Outer Ring -->
-            <circle class="outer-ring"
-                cx="50"
-                cy="50"
-                r="36"/>
-
-            <!-- Inner Ring -->
-            <circle class="inner-ring"
-                cx="50"
-                cy="50"
-                r="24"/>
-
-            <!-- Center Dot -->
-            <circle class="core"
-                cx="50"
-                cy="50"
-                r="3"/>
-
-        </svg>
-
-    </div>
-
-    <span class="logo-text">
-        Version3.0
-    </span>
-
-</div>
-
-        <ul>
-
-            <li><a href="index.html">Home</a></li>
-
-            <li><a href="dashboard.html">Dashboard</a></li>
-
-            <li><a href="projects.html">Projects</a></li>
-
-            <li><a href="about.html">About</a></li>
-
-            <li><a href="contact.html">Contact</a></li>
-
-        </ul>
-
-    </nav>
-
-
-
-    <!-- Digital Clock -->
-
-<section class="top-bar">
-
-    <div class="clock-card">
-
-        <h3>🕓 Digital Clock</h3>
-
-        <h1 id="clock">00:00:00</h1>
-
-    </div>
-
-</section>
-
-
-
-    <!-- ===========================
-            Hero Section
-     ============================ -->
-
-    <section class="hero">
-
-        <div class="hero-left">
-
-            <h1>CYBERVISION</h1>
-
-            <p>
-
-               <ul class="hero-features">
-
-    <li>
-        <i class="fas fa-shield-halved"></i>
-        Cyber Security
-    </li>
-
-    <li>
-        <i class="fas fa-fingerprint"></i>
-        Crime Investigation
-    </li>
-
-    <li>
-        <i class="fas fa-crosshairs"></i>
-        Threat Intelligence
-    </li>
-
-    <li>
-        <i class="fas fa-magnifying-glass"></i>
-        OSINT (Info Gathering)
-    </li>
-
-    <li>
-        <i class="fas fa-code"></i>
-        Fullstack Web Developer
-    </li>
-
-</ul>
-     
-       </p>
-
-        <a href="dashboard.html" class="launch-btn">
-    🚀 Launch Dashboard
-</a>
-
-        </div>
-
-
-
-        <div class="hero-right">
-
-            <div class="terminal">
-
-                <div class="terminal-header">
-
-                    <span class="red"></span>
-
-                    <span class="yellow"></span>
-
-                    <span class="green"></span>
-
-                </div>
-
-                <div id="console">
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ===========================
-            Dashboard Cards
-    ============================ -->
-
-  <section class="dashboard">
-
-    <div class="card">
-
-        <h3>CPU Usage</h3>
-
-        <h1 id="cpu">19%</h1>
-
-    </div>
-
-    <div class="card">
-
-        <h3>Memory</h3>
-
-        <h1 id="memory">6.9 GB</h1>
-
-    </div>
-
-    <div class="card">
-
-        <h3>Network</h3>
-
-        <h1 id="network">ONLINE</h1>
-
-    </div>
-
-    <div class="card">
-
-        <h3>Status</h3>
-
-        <h1 id="status">READY</h1>
-
-    </div>
-
-</section>
-
-<section class="activity-feed">
-
-<h2>Recent Activity</h2>
-
-<div class="activity-log">
-
-<p>[INFO] Dashboard initialized</p>
-
-<p>[INFO] Theme loaded</p>
-
-<p>[INFO] Terminal ready</p>
-
-<p>[INFO] Charts loading...</p>
-
-<p>[INFO] Waiting for interaction...</p>
-
-</div>
-
-</section>
-
-<footer class="footer">
-
-<h3>Connect With Me</h3>
-
-<div class="social-links">
-
-<a href="https://www.facebook.com/Ethicalnawar"><i class="fab fa-facebook-f"></i></a>
-
-<a href="https://www.instagram.com/nawar20082026"><i class="fab fa-instagram"></i></a>
-
-<a href="https://www.twitter.com/cyberwhitenawar"><i class="fab fa-x-twitter"></i></a>
-
-<a href="https://t.me/cyberwhitenawar"><i class="fab fa-telegram-plane"></i></a>
-
-<a href="https://www.github.com/ethicalraisa-web"><i class="fab fa-github"></i></a>
-
-</div>
-
-<p>
-
-© 2026 Ariban Nawar
-
-</p>
-
-</footer>
-
-
-    <!-- JavaScript -->
-
-    <script src="js/boot.js"></script>
-    
-    <script src="js/particles.js"></script>
-
-    <script src="js/clock.js"></script>
-
-    <script src="js/terminal.js"></script>
-
-    <script src="js/dashboard.js"></script>
-
-    <script src="js/animation.js"></script>
-
-    <script src="js/matrix.js"></script>
-    
-    <script src="js/app.js"></script>
+<script src="js/matrix.js"></script>
+<script src="js/boot.js"></script>
+
+<script>
+setTimeout(() => {
+    window.location.replace("authentication.html");
+}, 7300);
+</script>
 
 </body>
 

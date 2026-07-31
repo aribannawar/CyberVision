@@ -40,7 +40,7 @@ function bootSequence(){
 
             setTimeout(()=>{
 
-                bootScreen.style.display="none";
+                window.location.replace("authentication.html");
 
             },800);
 

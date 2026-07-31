@@ -13,17 +13,12 @@ gap:15px;
 }
 
 .cyber-logo{
-
-width:42px;
-
-height:42px;
-
+width:70px;
+height:70px;
 display:flex;
-
 justify-content:center;
-
 align-items:center;
-
+flex-shrink:0;
 }
 
 .cyber-logo svg{
@@ -94,18 +89,24 @@ animation:pulseCore 2.5s ease-in-out infinite;
 
 /* ---------- Animations ---------- */
 
-@keyframes rotateLeft{
+@media (max-width:768px){
 
-from{
-
-transform:rotate(0deg);
+.boot-container h1{
+font-size:2.8rem;
+letter-spacing:1px;
+white-space:nowrap;
+}
 
 }
 
+@keyframes rotateLeft{
+
+from{
+transform:rotate(0deg);
+}
+
 to{
-
 transform:rotate(-360deg);
-
 }
 
 }
@@ -113,15 +114,11 @@ transform:rotate(-360deg);
 @keyframes rotateRight{
 
 from{
-
 transform:rotate(0deg);
-
 }
 
 to{
-
 transform:rotate(360deg);
-
 }
 
 }

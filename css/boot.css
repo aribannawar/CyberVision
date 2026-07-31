@@ -1,107 +1,186 @@
 /* ==========================
-        Boot Screen
+        CyberVision Boot
 ========================== */
 
 #boot-screen{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100vh;
 
-position:fixed;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-top:0;
-left:0;
+    background:#050816;
 
-width:100%;
-height:100vh;
+    z-index:99999;
 
-background:#050816;
+    overflow:hidden;
 
-display:flex;
-
-justify-content:center;
-align-items:center;
-
-z-index:99999;
-
-transition:opacity .8s ease;
-
+    transition:opacity .8s ease;
 }
+
+/* ==========================
+      Boot Container
+========================== */
 
 .boot-container{
 
-width:min(90%,700px);
+    width:min(92%,720px);
 
-padding:20px;
+    padding:30px;
 
-text-align:center;
+    text-align:center;
 
-margin:auto;
-
-}
-
-.boot-container h1{
-
-font-size:clamp(2.2rem,11vw,4.5rem);
-
-letter-spacing:4px;
-
-color:#00E5FF;
-
-text-shadow:0 0 20px rgba(0,229,255,.6);
-
-margin-bottom:15px;
-
-word-break:break-word;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
 
 }
 
-.boot-container p{
+/* ==========================
+      Logo
+========================== */
 
-font-size:clamp(.95rem,4vw,1.2rem);
+#boot-screen .logo{
 
-color:#9ca3af;
+    display:flex;
 
-margin-bottom:35px;
+    align-items:center;
+    justify-content:center;
+
+    gap:18px;
+
+    margin-bottom:15px;
 
 }
+
+#boot-screen .cyber-logo{
+
+    width:82px;
+    height:82px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    flex-shrink:0;
+
+}
+
+#boot-screen .cyber-logo svg{
+
+    width:100%;
+    height:100%;
+
+    overflow:visible;
+
+}
+
+#boot-screen .logo-text{
+
+    font-size:clamp(2.2rem,7vw,4.2rem);
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    white-space:nowrap;
+
+    color:#00E5FF;
+
+    text-shadow:
+        0 0 12px #00E5FF,
+        0 0 28px #00E5FF,
+        0 0 55px rgba(0,229,255,.8);
+
+}
+
+/* ==========================
+      Subtitle
+========================== */
+
+.boot-container h3{
+
+    margin:10px 0 35px;
+
+    font-size:clamp(1rem,3vw,1.45rem);
+
+    color:#CFEFFF;
+
+    font-weight:500;
+
+}
+
+/* ==========================
+      Progress Bar
+========================== */
 
 .boot-progress{
 
-width:100%;
+    width:100%;
+    max-width:620px;
 
-max-width:600px;
+    height:12px;
 
-height:12px;
+    border-radius:50px;
 
-margin:auto;
+    overflow:hidden;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(0,229,255,.2);
+
+    box-shadow:
+        0 0 10px rgba(0,229,255,.2);
 
 }
 
 #boot-fill{
 
-height:100%;
+    width:0%;
 
-width:0%;
+    height:100%;
 
-background:linear-gradient(90deg,#00E5FF,#00FF99);
+    border-radius:50px;
 
-transition:width .3s;
+    background:
+    linear-gradient(
+        90deg,
+        #00E5FF,
+        #00FF99
+    );
+
+    box-shadow:
+        0 0 20px #00E5FF;
+
+    transition:width .35s ease;
 
 }
+
+/* ==========================
+        Console Log
+========================== */
 
 #boot-log{
 
-font-family:"JetBrains Mono",monospace;
+    margin-top:30px;
 
-font-size:1.05rem;
+    font-family:"JetBrains Mono",monospace;
 
-font-weight:700;
+    font-size:1.05rem;
 
-margin-top:35px;
+    font-weight:700;
 
-transition:.3s;
+    min-height:35px;
 
 }
 
-/* Cyan */
+/* ==========================
+        Neon Colors
+========================== */
 
 .cyan{
 
@@ -113,8 +192,6 @@ text-shadow:
 
 }
 
-/* Green */
-
 .green{
 
 color:#00FF99;
@@ -125,19 +202,15 @@ text-shadow:
 
 }
 
-/* Purple */
-
 .purple{
 
-color:#9D4DFF;
+color:#A96BFF;
 
 text-shadow:
-0 0 10px #9D4DFF,
-0 0 25px #9D4DFF;
+0 0 10px #A96BFF,
+0 0 25px #A96BFF;
 
 }
-
-/* Yellow */
 
 .yellow{
 
@@ -149,8 +222,6 @@ text-shadow:
 
 }
 
-/* Blue */
-
 .blue{
 
 color:#4DB8FF;
@@ -161,8 +232,6 @@ text-shadow:
 
 }
 
-/* Success */
-
 .success{
 
 color:#00FF66;
@@ -170,7 +239,7 @@ color:#00FF66;
 font-weight:800;
 
 text-shadow:
-0 0 15px #00FF66,
+0 0 12px #00FF66,
 0 0 35px #00FF66;
 
 animation:pulseGlow 1s infinite alternate;
@@ -180,36 +249,65 @@ animation:pulseGlow 1s infinite alternate;
 @keyframes pulseGlow{
 
 from{
-
 filter:brightness(.8);
-
 }
 
 to{
-
-filter:brightness(1.4);
-
+filter:brightness(1.35);
 }
 
 }
+
+/* ==========================
+        Mobile
+========================== */
 
 @media (max-width:768px){
 
 .boot-container{
 
-padding:15px;
+padding:18px;
 
 }
 
-.boot-container h1{
+#boot-screen .logo{
 
-letter-spacing:2px;
+gap:12px;
+
+}
+
+#boot-screen .cyber-logo{
+
+width:62px;
+height:62px;
+
+}
+
+#boot-screen .logo-text{
+
+font-size:clamp(1.9rem,9vw,3rem);
+
+letter-spacing:1px;
+
+}
+
+.boot-container h3{
+
+font-size:1.1rem;
+
+margin-bottom:25px;
 
 }
 
 .boot-progress{
 
 height:10px;
+
+}
+
+#boot-log{
+
+font-size:.95rem;
 
 }
 
