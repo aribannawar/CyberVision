@@ -13,9 +13,7 @@
 <link rel="stylesheet" href="css/about.css">
 <link rel="stylesheet" href="css/footer.css">
 <link rel="stylesheet" href="css/logo.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 
@@ -171,7 +169,7 @@ into one powerful workspace.
 
 
 First, the concepts idea of webpage design (UI interface setup) :
->>> Ultimate modern Cyber live Dashboard/Hacker Console UI interface setup designed in multiple bold neon effects and hover animations with matrix binary codes [0,1,0,0,01,1,1,0,1,1,0,1...]  constantly raining styled :
+>>> Ultimate modern Cyber live Dashboard/Hacker Console UI interface setup designed in multiple bold neon effects and hover animations with matrix binary codes [0,1,0,0,01,1,1,0,1,1,0,1...]  constantly raining styled :<br>
 
 ✓ 📱Boot loading & Authentication Screen<br>
 ✓ 👩🏻‍💻 Developer bar<br>
@@ -194,11 +192,11 @@ First, the concepts idea of webpage design (UI interface setup) :
 
 <ul>
 
-<li><b>🔐 Defensive Security</b></li>
+<li><b>🔐 Defensive Security</b> (Coming soon)</li>
 
-<li><b>🛡 Offensive Security</b></li>
+<li><b>🛡 Offensive Security</b> (Coming soon)</li>
 
-<li>🔎 OSINT Frameworks</b></li>
+<li><b>🔎 OSINT Frameworks</b> (Coming soon)</li>
 
 <li><b>🤖 AI Integration</b> (Coming Soon)</li>
 
@@ -294,7 +292,13 @@ and professional UI experiences.
 
 </footer>
 
-<script src="js/session.js"></script>
+<script type="module" src="/js/security-loader.js"></script>
+
+<script type="module">
+import { requireSession } from "/js/session.js";
+
+await requireSession();
+</script>
 
 </body>
 

@@ -1,4 +1,4 @@
-import { logSecurityEvent } from "./logger.js";
+import { logSecurityEvent } from "../../lib/security/logger.js";
 export default async function botCheck(req, res) {
 
     const ua = (req.headers["user-agent"] || "").toLowerCase();

@@ -1,7 +1,7 @@
 import {
     getSession,
     refreshSession
-} from "./session-store.js";
+} from "../../lib/auth/session-store.js";
 
 import { Redis } from "@upstash/redis";
 

@@ -1,22 +1,50 @@
-async function validateSession() {
+const API = "/api/auth";
+
+export async function requireSession() {
     try {
-        const res = await fetch("/api/session/validate", {
-            credentials: "include"
+        const response = await fetch(`${API}/validate-session`, {
+            method: "GET",
+            credentials: "include",
+            cache: "no-store"
         });
 
-        const data = await res.json();
-
-        if (!data.authenticated) {
-            window.location.replace("authentication.html");
-            return;
+        if (!response.ok) {
+            throw new Error("Unauthorized");
         }
 
-        console.log("✔ Session Valid");
+        const data = await response.json();
+
+        if (!data.success) {
+            throw new Error("Invalid session");
+        }
+
+        // Save session globally
+        window.CyberVisionSession = data.user;
+
+        return data.user;
 
     } catch (err) {
-        console.error(err);
-        window.location.replace("authentication.html");
+
+        console.warn("[CyberVision] Session invalid.");
+
+        // Prevent redirect loop
+        if (!location.pathname.includes("authentication.html")) {
+            location.replace("/authentication.html");
+        }
+
+        return null;
     }
 }
 
-validateSession();
+export async function logout() {
+
+    await fetch(`${API}/destroy-session`, {
+        method: "POST",
+        credentials: "include"
+    });
+
+    localStorage.clear();
+    sessionStorage.clear();
+
+    location.replace("/authentication.html");
+}

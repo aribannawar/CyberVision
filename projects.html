@@ -272,7 +272,13 @@
 
 <!-- JavaScript -->
 
-<script src="js/session.js"></script>
+<script type="module" src="/js/security-loader.js"></script>
+
+<script type="module">
+import { requireSession } from "/js/session.js";
+
+await requireSession();
+</script>
 
 <script src="js/matrix.js"></script>
 

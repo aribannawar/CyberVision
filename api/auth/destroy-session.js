@@ -1,5 +1,5 @@
-import { destroySession, getSession } from "./session-store.js";
-import { logSecurityEvent } from "../security/logger.js";
+import { destroySession, getSession } from "../../lib/auth/session-store.js";
+import { logSecurityEvent } from "../../lib/security/logger.js";
 export default async function handler(req, res) {
 
     if (req.method !== "POST") {

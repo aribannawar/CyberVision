@@ -1,4 +1,4 @@
-import { getSession, refreshSession } from "./session-store.js";
+import { getSession, refreshSession } from "../../lib/auth/session-store.js";
 
 export default async function handler(req, res) {
 
