@@ -1,0 +1,25 @@
+{
+  "name": "cybervision",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aribannawar/CyberVision.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/aribannawar/CyberVision/issues"
+  },
+  "homepage": "https://github.com/aribannawar/CyberVision#readme",
+  "dependencies": {
+    "@upstash/redis": "^1.38.1",
+    "google-auth-library": "^11.0.0"
+  }
+}

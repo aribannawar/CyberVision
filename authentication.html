@@ -116,7 +116,19 @@
 
         <!-- Google Sign In Button -->
 
-   <div
+<div
+class="cf-turnstile"
+data-sitekey="0x4AAAAAAEDDUdSkPAErpUM-"
+data-callback="turnstileSuccess">
+</div>
+
+  <div
+    class="cf-turnstile"
+    data-sitekey="0x4AAAAAAEDDUdSkPAErpUM-"
+    data-callback="turnstileSuccess">
+</div> 
+
+  <div
   class="g_id_signin"
   data-type="standard"
   data-theme="filled_blue"
@@ -157,6 +169,11 @@
 
 </div>
 
+<script
+src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+async
+defer>
+</script>
 <script src="js/google.js"></script>
 <script src="js/authentication.js"></script>
 <script src="js/matrix.js"></script>
