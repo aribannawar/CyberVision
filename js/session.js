@@ -14,9 +14,13 @@ export async function requireSession() {
 
         const data = await response.json();
 
-        if (!data.success) {
-            throw new Error("Invalid session");
-        }
+        if (!data.authenticated) {
+    throw new Error("Invalid session");
+}
+
+window.CyberVisionSession = data.user;
+
+return data.user;
 
         // Save session globally
         window.CyberVisionSession = data.user;
