@@ -28,8 +28,8 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; img-src 'self' https: data:; script-src 'self' https://accounts.google.com https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline'; frame-src https://accounts.google.com https://challenges.cloudflare.com; connect-src 'self' https://accounts.google.com https://challenges.cloudflare.com;"
-        }
+          "value": "default-src 'self'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; script-src 'self' https://accounts.google.com https://challenges.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com data:;"
+         }
       ]
     }
   ]
