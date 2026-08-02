@@ -54,17 +54,16 @@ async function handler(req, res) {
 
     }
 
-    catch (err) {
+  catch (err) {
+    console.error("CREATE SESSION ERROR:", err);
 
-        console.error(err);
+    return res.status(500).json({
+        success: false,
+        error: err.message
+    });
 
-        return res.status(500).json({
+}
 
-            success: false
-
-        });
-
-    }
 
 }
 
