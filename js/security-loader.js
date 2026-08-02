@@ -16,13 +16,11 @@ import "./secure-fetch.js";
 
     await initCsrf();
 
-    await initFingerprint();
-
 console.log(
     "Fingerprint:",
     window.CV_FINGERPRINT_ID
 );
 
-    document.documentElement.style.visibility = "visible";
+document.documentElement.style.visibility = "visible";
 
 })();

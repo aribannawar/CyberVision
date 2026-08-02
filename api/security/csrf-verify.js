@@ -1,19 +1,33 @@
-export default function verifyCSRF(req) {
+export async function verifyCsrfToken(req) {
 
-    const clientToken = req.headers["x-csrf-token"];
+    const clientToken =
+        req.headers["x-csrf-token"];
 
-    const cookie = req.headers.cookie || "";
+    const cookie =
+        req.headers.cookie || "";
 
-    const match = cookie.match(/csrf_token=([^;]+)/);
+    const match =
+        cookie.match(/csrf_token=([^;]+)/);
 
     if (!match) {
 
-        return false;
+        return {
+
+            valid: false
+
+        };
 
     }
 
-    const serverToken = match[1];
+    const serverToken =
+        match[1];
 
-    return clientToken === serverToken;
+    return {
+
+        valid:
+
+            clientToken === serverToken
+
+    };
 
 }

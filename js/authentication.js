@@ -1,43 +1,65 @@
 const steps = [
-"✓ Establishing Secure Channel",
-"✓ Verifying User Identity",
-"✓ Loading Operator Profile",
-"✓ Synchronizing Session",
-"✓ Access Granted"
+
+    "✓ Establishing Secure Channel",
+
+    "✓ Verifying User Identity",
+
+    "✓ Loading User Profile",
+
+    "✓ Synchronizing Session",
+
+    "✓ Access Granted"
+
 ];
 
 const logs = [
-"[00.41] Initializing secure environment...",
-"[00.92] Secure tunnel established",
-"[01.48] User identity verified",
-"[02.13] Operator profile loaded",
-"[02.86] Session synchronized",
-"[03.55] Dashboard ready",
-"[04.00] ACCESS GRANTED"
+
+    "[00.41] Initializing secure environment...",
+
+    "[00.92] Secure tunnel established",
+
+    "[01.48] Google identity verified",
+
+    "[02.13] Session cookie received",
+
+    "[02.86] Synchronizing profile",
+
+    "[03.55] Dashboard ready",
+
+    "[04.00] ACCESS GRANTED"
+
 ];
 
-const progress = document.getElementById("progress-fill");
-const percent = document.getElementById("percent");
-const stepsBox = document.getElementById("steps");
-const consoleBox = document.getElementById("console-log");
+const progress =
+document.getElementById("progress-fill");
 
-let p = 0;
+const percent =
+document.getElementById("percent");
 
-// Console Animation
-let line = 0;
+const stepsBox =
+document.getElementById("steps");
+
+const consoleBox =
+document.getElementById("console-log");
+
+let consoleLine = 0;
+
+// ----------------------------------------------------
 
 function typeConsole() {
 
-    if (line >= logs.length) {
+    if (consoleLine >= logs.length) {
 
         setTimeout(() => {
 
-            document.body.style.transition = "opacity .7s ease";
+            document.body.style.transition =
+                "opacity .7s ease";
+
             document.body.style.opacity = "0";
 
             setTimeout(() => {
 
-    window.location.replace("home.html");
+                window.location.replace("/home.html");
 
             }, 700);
 
@@ -47,7 +69,8 @@ function typeConsole() {
 
     }
 
-    const div = document.createElement("div");
+    const div =
+        document.createElement("div");
 
     consoleBox.appendChild(div);
 
@@ -55,19 +78,22 @@ function typeConsole() {
 
     function type() {
 
-        if (i < logs[line].length) {
+        if (i < logs[consoleLine].length) {
 
-            div.textContent += logs[line].charAt(i);
+            div.textContent +=
+                logs[consoleLine][i];
 
             i++;
 
             setTimeout(type, 25);
 
-        } else {
+        }
 
-            line++;
+        else {
 
-            setTimeout(typeConsole, 350);
+            consoleLine++;
+
+            setTimeout(typeConsole, 300);
 
         }
 
@@ -77,53 +103,59 @@ function typeConsole() {
 
 }
 
-window.onload = () => {
+// ----------------------------------------------------
 
-    console.log("Waiting for Google Sign-In...");
-
-};
-
-function startAuthentication(){
+window.startAuthentication = function () {
 
     let p = 0;
 
-    const progressTimer = setInterval(() => {
+    const timer = setInterval(() => {
 
         p++;
 
         progress.style.width = p + "%";
+
         percent.textContent = p + "%";
 
-        if (p >= 100){
+        if (p >= 100) {
 
-            clearInterval(progressTimer);
+            clearInterval(timer);
 
         }
 
-    },40);
+    }, 40);
 
-    steps.forEach((text,index)=>{
+    steps.forEach((step, index) => {
 
-        setTimeout(()=>{
+        setTimeout(() => {
 
-            const item=document.createElement("div");
+            const item =
+                document.createElement("div");
 
-            item.className="step";
+            item.className = "step";
 
-            item.textContent=text;
+            item.textContent = step;
 
             stepsBox.appendChild(item);
 
-            setTimeout(()=>{
+            requestAnimationFrame(() => {
 
                 item.classList.add("show");
 
-            },50);
+            });
 
-        },index*700);
+        }, index * 700);
 
     });
 
     typeConsole();
 
-}
+};
+
+// ----------------------------------------------------
+
+window.onload = () => {
+
+    console.log("Waiting for Google authentication...");
+
+};

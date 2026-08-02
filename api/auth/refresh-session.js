@@ -5,37 +5,24 @@ import {
 
 import { Redis } from "@upstash/redis";
 
+import { protect } from "../security/protect.js";
+
 const redis = new Redis({
 
     url: process.env.UPSTASH_REDIS_REST_URL,
-
     token: process.env.UPSTASH_REDIS_REST_TOKEN
 
 });
 
-export default async function handler(req, res) {
-
-export default protect(handler);
+async function handler(req, res) {
 
     if (req.method !== "POST") {
 
         return res.status(405).json({
-
             success: false
-
         });
 
     }
-
-import { protect } from "../security/protect.js";
-
-async function handler(req, res) {
-
-    // Login verification...
-
-}
-
-export default protect(handler);
 
     try {
 
@@ -47,9 +34,7 @@ export default protect(handler);
 
             return res.status(401).json({
 
-                success: false,
-
-                message: "No session"
+                success: false
 
             });
 
@@ -63,9 +48,7 @@ export default protect(handler);
 
             return res.status(401).json({
 
-                success: false,
-
-                message: "Invalid session"
+                success: false
 
             });
 
@@ -97,7 +80,9 @@ export default protect(handler);
 
         });
 
-    } catch (err) {
+    }
+
+    catch (err) {
 
         console.error(err);
 
@@ -110,3 +95,5 @@ export default protect(handler);
     }
 
 }
+
+export default protect(handler);

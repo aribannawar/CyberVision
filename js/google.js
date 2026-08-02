@@ -1,40 +1,62 @@
+const API = "/api/auth";
+
 let humanVerified = false;
 
-async function turnstileSuccess(token){
+// ----------------------------------------------------
+// Cloudflare Turnstile
+// ----------------------------------------------------
 
-    const res = await fetch("/api/security/turnstile",{
+async function turnstileSuccess(token) {
 
-        method:"POST",
+    try {
 
-        headers:{
-            "Content-Type":"application/json"
-        },
+        const res = await fetch("/api/security/turnstile", {
 
-        body:JSON.stringify({
-            token
-        })
+            method: "POST",
 
-    });
+            headers: {
+                "Content-Type": "application/json"
+            },
 
-    const data = await res.json();
+            body: JSON.stringify({
+                token
+            })
 
-    if(data.success){
+        });
+
+        const data = await res.json();
+
+        if (!data.success) {
+
+            alert("Human verification failed.");
+
+            return;
+
+        }
 
         humanVerified = true;
 
-        console.log("✔ Human Verified");
+        console.log("✔ Human verified");
 
-    }else{
+    } catch (err) {
 
-        alert("Human verification failed.");
+        console.error(err);
+
+        alert("Unable to verify Turnstile.");
 
     }
 
 }
 
-function handleCredentialResponse(response){
+window.turnstileSuccess = turnstileSuccess;
 
-    if(!humanVerified){
+// ----------------------------------------------------
+// Google OAuth
+// ----------------------------------------------------
+
+async function handleCredentialResponse(response) {
+
+    if (!humanVerified) {
 
         alert("Complete Human Verification first.");
 
@@ -42,23 +64,84 @@ function handleCredentialResponse(response){
 
     }
 
-    const payload = JSON.parse(
+    try {
 
-        atob(response.credential.split(".")[1])
+        // Step 1
+        const verify = await fetch(`${API}/verify`, {
 
-    );
+            method: "POST",
 
-    document.getElementById("username").textContent =
-        payload.name;
+            headers: {
+                "Content-Type": "application/json"
+            },
 
-    document.getElementById("user-photo").src =
-        payload.picture;
+            body: JSON.stringify({
 
-    localStorage.setItem(
-        "cv_user",
-        JSON.stringify(payload)
-    );
+                credential: response.credential
 
-    startAuthentication();
+            })
+
+        });
+
+        const user = await verify.json();
+
+        if (!verify.ok || !user.authenticated) {
+
+            alert("Google verification failed.");
+
+            return;
+
+        }
+
+        // Step 2
+        const create = await fetch(`${API}/create-session`, {
+
+            method: "POST",
+
+            credentials: "include",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+
+                user
+
+            })
+
+        });
+
+        const session = await create.json();
+
+        if (!session.success) {
+
+            alert("Unable to create session.");
+
+            return;
+
+        }
+
+        // Optional UI only
+
+        document.getElementById("username").textContent =
+            user.name;
+
+        document.getElementById("user-photo").src =
+            user.picture;
+
+        // Start CyberVision loading animation
+
+        startAuthentication();
+
+    } catch (err) {
+
+        console.error(err);
+
+        alert("Authentication failed.");
+
+    }
 
 }
+
+window.handleCredentialResponse = handleCredentialResponse;

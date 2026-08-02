@@ -1,33 +1,28 @@
 import { logSecurityEvent } from "../../lib/security/logger.js";
-export default async function botCheck(req, res) {
+
+export async function checkBot(req) {
 
     const ua = (req.headers["user-agent"] || "").toLowerCase();
-
     const headers = req.headers;
+
+    const ip =
+        req.headers["x-forwarded-for"]?.split(",")[0] ||
+        req.socket?.remoteAddress ||
+        "unknown";
 
     let score = 0;
 
-    // Suspicious User Agents
     const badAgents = [
 
         "headless",
-
         "selenium",
-
         "puppeteer",
-
         "playwright",
-
         "phantom",
-
         "curl",
-
         "wget",
-
         "python",
-
         "scrapy",
-
         "httpclient"
 
     ];
@@ -42,8 +37,6 @@ export default async function botCheck(req, res) {
 
     }
 
-    // Missing browser headers
-
     if (!headers["accept-language"])
         score += 20;
 
@@ -56,48 +49,40 @@ export default async function botCheck(req, res) {
     if (!headers["sec-ch-ua"])
         score += 20;
 
-    // Very short User-Agent
-
     if (ua.length < 20)
         score += 30;
 
-await logSecurityEvent({
-
-    type: "BOT_DETECTED",
-
-    ip,
-
-    severity: "HIGH",
-
-    message: "Headless browser blocked",
-
-    details: {
-
-        score
-
-    }
-
-});
-
-    // Final decision
-
     if (score >= 50) {
 
-        return res.status(403).json({
+        await logSecurityEvent({
 
-            success: false,
+            type: "BOT_DETECTED",
 
-            reason: "Bot detected",
+            ip,
+
+            severity: "HIGH",
+
+            message: "Headless browser blocked",
+
+            details: { score }
+
+        });
+
+        return {
+
+            allowed: false,
+
+            reason: "BOT_DETECTED",
 
             score
 
-        });
+        };
 
     }
 
     return {
 
-        success: true,
+        allowed: true,
 
         score
 

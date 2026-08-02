@@ -1,47 +1,38 @@
-import crypto from "crypto";
+import { createSession } from "../../lib/auth/session-store.js";
+import { protect } from "../security/protect.js";
 
-const sessions = new Map();
-
-export default async function handler(req, res) {
+async function handler(req, res) {
 
     if (req.method !== "POST") {
+
         return res.status(405).json({
-            error: "Method Not Allowed"
+            success: false
         });
+
     }
 
     try {
 
         const user = req.body;
 
-        if (!user.email) {
+        if (!user || !user.email) {
+
             return res.status(400).json({
+
+                success: false,
                 error: "Missing user."
+
             });
+
         }
 
-        const sessionId =
-            crypto.randomBytes(32).toString("hex");
-
-        sessions.set(sessionId, {
-
-            id: user.id,
-
-            name: user.name,
-
-            email: user.email,
-
-            picture: user.picture,
-
-            created: Date.now()
-
-        });
+        const sessionId = await createSession(user);
 
         res.setHeader(
 
             "Set-Cookie",
 
-            `cv_session=${sessionId}; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=86400`
+            `cv_session=${sessionId}; HttpOnly; Secure; SameSite=Strict; Path=/; Max-Age=${60 * 60 * 24 * 30}`
 
         );
 
@@ -51,14 +42,20 @@ export default async function handler(req, res) {
 
         });
 
-    } catch {
+    }
+
+    catch (err) {
+
+        console.error(err);
 
         return res.status(500).json({
 
-            error: "Session creation failed."
+            success: false
 
         });
 
     }
 
 }
+
+export default protect(handler);
