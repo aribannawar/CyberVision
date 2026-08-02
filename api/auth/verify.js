@@ -1,5 +1,5 @@
 import { OAuth2Client } from "google-auth-library";
-import { protect } from "../security/protect.js";
+import { protect } from "../../lib/security/protect.js";
 
 const client = new OAuth2Client(
     process.env.GOOGLE_CLIENT_ID

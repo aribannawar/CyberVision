@@ -5,7 +5,7 @@ import {
 
 import { Redis } from "@upstash/redis";
 
-import { protect } from "../security/protect.js";
+import { protect } from "../../lib/security/protect.js";
 
 const redis = new Redis({
 

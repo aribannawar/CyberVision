@@ -5,7 +5,7 @@ import {
 
 import { logSecurityEvent } from "../../lib/security/logger.js";
 
-import { protect } from "../security/protect.js";
+import { protect } from "../../lib/security/protect.js";
 
 async function handler(req, res) {
 
