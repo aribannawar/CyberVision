@@ -22,11 +22,6 @@ window.CyberVisionSession = data.user;
 
 return data.user;
 
-        // Save session globally
-        window.CyberVisionSession = data.user;
-
-        return data.user;
-
     } catch (err) {
 
         console.warn("[CyberVision] Session invalid.");
