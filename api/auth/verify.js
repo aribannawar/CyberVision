@@ -44,7 +44,9 @@ async function handler(req, res) {
 
         });
 
-    } catch (err) {
+    }
+
+       catch (err) {
 
         console.error(err);
 
@@ -59,4 +61,4 @@ async function handler(req, res) {
 
 }
 
-export default protect(handler);
+export default handler;
