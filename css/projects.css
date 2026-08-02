@@ -202,6 +202,10 @@
 
     letter-spacing:2px;
 
+    text-shadow:
+        0 0 10px #00E5FF,
+        0 0 25px rgba(0,229,255,.45);
+
 }
 
 .hub-card h4{
@@ -211,6 +215,9 @@
     font-weight:500;
 
     margin-bottom:35px;
+
+    text-shadow:
+        0 0 8px rgba(0,229,255,.18);
 
 }
 
