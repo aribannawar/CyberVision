@@ -59,7 +59,7 @@ function typeConsole() {
 
             setTimeout(() => {
 
-                window.location.replace("/home.html");
+                window.location.replace("/usage-policy.html");
 
             }, 700);
 
