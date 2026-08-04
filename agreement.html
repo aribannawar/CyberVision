@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CyberVision • User Agreement</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/developer.css">
+<link rel="stylesheet" href="css/logo.css">
+<link rel="stylesheet" href="css/matrix.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/policy.css">
+
+</head>
+
+<body>
+
+<canvas id="matrix-bg"></canvas>
+
+<div id="particles"></div>
+
+<div class="developer-bar">
+
+<h1>
+
+👩🏻‍💻 Developed by
+<strong>Ariban Nawar</strong>
+
+</h1>
+
+</div>
+
+<section class="policy-page">
+
+<div class="policy-box">
+
+<div class="terminal-title">
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+</div>
+
+<h1 class="policy-title">
+CYBERVISION
+</h1>
+
+<h2 class="policy-status">
+RESPONSIBLE USE AGREEMENT
+</h2>
+
+<div class="terminal-title">
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+</div>
+
+<p>
+
+Before entering CyberVision, you must acknowledge
+and agree that this platform is intended solely for:
+
+</p>
+
+<ul class="policy-list">
+
+<li>✔ Cyber Security Education</li>
+
+<li>✔ Ethical Hacking Practice</li>
+
+<li>✔ Authorized Penetration Testing</li>
+
+<li>✔ Digital Forensics Research</li>
+
+<li>✔ Threat Intelligence & OSINT Learning</li>
+
+<li>✔ Defensive Security Training</li>
+
+</ul>
+
+<h3 class="warning-title">
+
+⚠ STRICTLY PROHIBITED
+
+</h3>
+
+<ul class="warning-list">
+
+<li>✖ Unauthorized access to systems</li>
+
+<li>✖ Attacking third-party networks</li>
+
+<li>✖ Illegal surveillance or monitoring</li>
+
+<li>✖ Credential theft or phishing</li>
+
+<li>✖ Malware deployment</li>
+
+<li>✖ Any activity violating local or international law</li>
+
+</ul>
+
+<div class="policy-note">
+
+<p>
+
+CyberVision and its developer shall not be held
+responsible for any misuse of the tools,
+frameworks, demonstrations, or educational
+content provided on this platform.
+
+</p>
+
+</div>
+
+<label class="agree-box">
+
+<input type="checkbox" id="agree">
+
+<span>
+
+☑ I agree to the CyberVision User Agreement,
+Privacy Policy, Terms & Conditions,
+and Responsible Use Agreement.
+
+</span>
+
+</label>
+
+<div class="buttons">
+
+<button
+id="continueBtn"
+class="launch-btn"
+disabled>
+
+CONTINUE →
+
+</button>
+
+</div>
+
+<div class="terminal-title">
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+const agree =
+document.getElementById("agree");
+
+const button =
+document.getElementById("continueBtn");
+
+agree.addEventListener("change",()=>{
+
+button.disabled=!agree.checked;
+
+});
+
+button.addEventListener("click",()=>{
+
+window.location.href="/home.html";
+
+});
+
+</script>
+
+<script src="js/matrix.js"></script>
+
+</body>
+
+</html>
