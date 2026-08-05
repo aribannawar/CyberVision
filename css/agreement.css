@@ -1,0 +1,9 @@
+.launch-btn:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+}
+
+.launch-btn:not(:disabled) {
+    opacity: 1;
+    cursor: pointer;
+}
