@@ -1,6 +1,12 @@
 # 🌐 CYBERVISION 
 [CYBERVISION](https://cyber-vision-one.vercel.app) is an Ultimate All-in-one Security Framework softwares project stored as a Website. It contains all the security testing toolkits and necessary softwares for both (☠️OFFENSIVE &amp; 🛡️DEFENSIVE).
 #
+## 📸 Booting Screen
+
+
+
+![Dashboard](Screenshot_20260731-131539.png)
+#
 # 🎯 Purpose
 ⚠The main purpose of creating my website is to do Ethically/Legally security testing or attack testing (only on your own account and system network or you have explicit permission to use it!!). 🚀I have divided the 'Project' section of the website into 4 separate tasks - Defensive Security or Security Protecting & Offensive Security or Attacking, OSINT Frameworks or Finding Information about a Person & MASS REPORT attack that simulates profile suspension accorss all the major known social platforms.
 #
@@ -23,6 +29,14 @@
 ✓📟 multi colored Matrix styled Computer binary codes raining animations background of the grid <br>
 ✓🔋 shows CPU usage, Network status,Memory, space <br>
 ✓ 🌐 Social Media profile links (Contact with me)
+#
+## 📸 Homepage UI
+
+![Dashboard](Screenshot_20260729-210249.png)
+
+## 📸 Terminal UI
+
+![Dashboard](Screenshot_20260729-200513.png)
 #
 # ⚙️ Features specialization 
 ![Defensive Security](https://img.shields.io/badge/🛡️_DEFENSIVE-SECURITY-blue?style=for-the-badge)
@@ -57,3 +71,7 @@ Block wifi connection, Hijack Social account, Hijack Banking Financial account, 
 (B)  📞 Phone number search (search for social media profils accosiated or connected with the user input 'phone number'- Facebook,Instagram,Twitter/X ,Google,What'sApp, Telegram,YouTube,GitHub,TikTok,LinkedIn) [Coming Soon]
 
 (C) 📧 Email search" (search for social media profils accosiated or connected with the user input 'email address' - Facebook,Instagram,Twitter/X ,Google,What'sApp, Telegram,YouTube,GitHub,TikTok,LinkedIn) [Coming Soon]
+#
+## 📸 PROJECT HUB 
+
+![Dashboard](Screenshot_20260729-232013.png)
