@@ -4,7 +4,7 @@
 # 🎯 Purpose
 ⚠The main purpose of creating my website is to do Ethically/Legally security testing or attack testing (only on your own account and system network or you have explicit permission to use it!!). 🚀I have divided the 'Project' section of the website into 4 separate tasks - Defensive Security or Security Protecting & Offensive Security or Attacking, OSINT Frameworks or Finding Information about a Person & MASS REPORT attack that simulates profile suspension accorss all the major known social platforms.
 #
-# ⚙️ Features specialization
+# 📱 UI Interface specialization
 >>Ultimate modern Cyber live Dashboard/Hacker Console UI interface setup designed in multiple bold neonic glowing effects and hover animations with matrix binary codes:
 
 ✓ 🌀Spectrum/spectre styled blue circling animations <br>
@@ -24,3 +24,36 @@
 ✓🔋 shows CPU usage, Network status,Memory, space <br>
 ✓ 🌐 Social Media profile links (Contact with me)
 #
+# ⚙️ Features specialization 
+![Defensive Security](https://img.shields.io/badge/🛡️_DEFENSIVE-SECURITY-blue?style=for-the-badge)
+
+
+
+
+![Offensive Security](https://img.shields.io/badge/☠️_OFFENSIVE-SECURITY-blue?style=for-the-badge)
+
+
+
+
+![OSINT Frameworks](https://img.shields.io/badge/🔍_OSINT-FRAMEWORKS-blue?style=for-the-badge)
+
+
+
+
+![Mass Report](https://img.shields.io/badge/🎯👤_MASS-REPORT-blue?style=for-the-badge)
+
+
+📂 Within the entire PROJECT HUB, I have divided the project sections into 4 different tasks - (Defensive or Security Protecting & Offensive or Attacking & OSINT Frameworks or Finding Information about a Person & MASS REPORT or profile suspension simulation):
+
+🔐 Defensive layer - Check suspicious URL link, protect social accounts from attacker using 2FA, protect yourself from being public data breach, Check Malicious APK file. [Coming Soon]
+
+🛡️ Offensive layer - Generate Phising Link, Generate infected APK, Attack Network protocol, Premium master Social Engineering, Crack Wireless password,
+Block wifi connection, Hijack Social account, Hijack Banking Financial account, Phish OTP verification code. [Coming Soon]
+
+🔎 OSINT Framework- 
+
+(A) 👤Username search ( search the  user input 'username' across major social platforms- Facebook,Instagram,Twitter/X ,Google,What'sApp, Telegram,YouTube,GitHub,TikTok,LinkedIn) [Coming Soon]
+
+(B)  📞 Phone number search (search for social media profils accosiated or connected with the user input 'phone number'- Facebook,Instagram,Twitter/X ,Google,What'sApp, Telegram,YouTube,GitHub,TikTok,LinkedIn) [Coming Soon]
+
+(C) 📧 Email search" (search for social media profils accosiated or connected with the user input 'email address' - Facebook,Instagram,Twitter/X ,Google,What'sApp, Telegram,YouTube,GitHub,TikTok,LinkedIn) [Coming Soon]
