@@ -33,10 +33,6 @@
 ## 📸 Homepage UI
 
 ![Dashboard](Screenshot_20260729-210249.png)
-
-## 📸 Terminal UI
-
-![Dashboard](Screenshot_20260729-200513.png)
 #
 # ⚙️ Features specialization 
 ![Defensive Security](https://img.shields.io/badge/🛡️_DEFENSIVE-SECURITY-blue?style=for-the-badge)
