@@ -75,3 +75,92 @@ Block wifi connection, Hijack Social account, Hijack Banking Financial account, 
 ## 📸 PROJECT HUB 
 
 ![Dashboard](Screenshot_20260804-220130.png)
+#
+# 🛡️🌐👤 Web-Security foundation & Enhanced User Privacy Protection 
+![CSRF Protection](https://img.shields.io/badge/CSRF-Protected-blue?style=flat-square)
+
+
+
+
+![Bot Detection](https://img.shields.io/badge/Bot%20Detection-Enabled-blue?style=flat-square)
+
+
+
+
+![Session Security](https://img.shields.io/badge/Session-Secured-blue?style=flat-square)
+
+
+
+
+![DDoS Protection](https://img.shields.io/badge/DDoS-Protected-blue?style=flat-square)
+
+
+
+
+![Rate Limiting](https://img.shields.io/badge/Rate%20Limiting-Active-blue?style=flat-square)
+
+
+
+
+![WAF](https://img.shields.io/badge/WAF-Enabled-blue?style=flat-square)
+
+
+
+
+![IP Reputation](https://img.shields.io/badge/IP%20Reputation-Checked-blue?style=flat-square)
+
+
+
+![Google OAuth](https://img.shields.io/badge/Auth-Google%20OAuth-blue?style=flat-square&logo=google&logoColor=white)
+
+
+
+
+![Redis Sessions](https://img.shields.io/badge/Sessions-Redis%20Backed-DC382D?style=flat-square&logo=redis&logoColor=white)
+
+
+
+
+![Cloudflare Turnstile](https://img.shields.io/badge/Bot%20Check-Turnstile-F38020?style=flat-square&logo=cloudflare&logoColor=white)
+
+
+✓ 𝙂𝙤𝙤𝙜𝙡𝙚-𝙨𝙞𝙜𝙣-𝙞𝙣 𝘼𝙪𝙩𝙝𝙚𝙣𝙩𝙞𝙘𝙖𝙩𝙞𝙤𝙣 𝙛𝙚𝙖𝙩𝙪𝙧𝙚𝙨🪪<br> ✓ 𝙇𝙞𝙣𝙠𝙚𝙙 𝙩𝙤 𝙂𝙤𝙤𝙜𝙡𝙚 𝘾𝙡𝙤𝙪𝙙 𝙋𝙧𝙤𝙟𝙚𝙘𝙩☁️<br>
+✓  𝙈𝙤𝙧𝙚 𝙐𝙨𝙚𝙧 𝙥𝙧𝙞𝙫𝙖𝙘𝙮 𝙖𝙙𝙙𝙚𝙙 𝙬𝙞𝙩𝙝 𝙂𝙤𝙤𝙜𝙡𝙚 𝘼𝙪𝙩𝙝𝙚𝙣𝙩𝙞𝙘𝙖𝙩𝙞𝙤𝙣 🔏 <br>
+🛡️𝙎𝙚𝙘𝙪𝙧𝙞𝙩𝙮 𝙝𝙚𝙖𝙙𝙚𝙧𝙨<br>
+✅ Content Security Policy (CSP)<br>
+✅ X-Frame-Options<br>
+✅ X-Content-Type-Options<br>
+✅ Referrer-Policy<br>
+✅ Permissions-Policy<br>
+✅ HSTS (for HTTPS)<br>
+✅Anti Clickjacking : Prevent attackers/hackers from embedding CyberVision inside an invisible iframe.<br>
+✅MIME Protection: Prevent browsers from guessing file types.<br>
+
+🔒 𝗘𝗻𝗰𝗿𝘆𝗽𝘁𝗲𝗱 𝗛𝗧𝗧𝗣𝗦 𝘀𝗲𝗿𝘃𝗶𝗻𝗴 𝗼𝗻𝗹𝘆<br>
+✅Force HTTPS<br>
+✅Automatic redirects<br>
+✅Secured Session cookies<br>
+✅Fixed XSS Risk : Cross-site-scripting vulnerability <br>
+
+🤖🚫 𝗔𝗻𝘁𝗶-𝗕𝗼𝘁 𝗽𝗿𝗼𝘁𝗲𝗰𝘁𝗶𝗼𝗻<br>
+✅Detect automated Headless browsers<br>
+✅Block suspicious user agents<br>
+✅Browser Fingerprinting<br>
+✅Request Validation<br>
+✅Cloudflare Turnstile (Human verification CAPTHAs)<br>
+✅ Browser Validation <br>
+
+🚦 𝗧𝗿𝗮𝗳𝗳𝗶𝗰 𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗥𝗮𝘁𝗲 𝗹𝗶𝗺𝗶𝘁𝗶𝗻𝗴<br>
+✅Limit repeated requests<br>
+✅Protect login/authentication endpoints<br>
+✅Slow down abusive IPs<br>
+✅Anti-DDoS<br>
+✅Login Protection<br>
+✅Abuse Detection<br>
+✅WAF Firewall Protection <br>
+
+🖥️ 𝗠𝗼𝗻𝗶𝘁𝗼𝗿𝗶𝗻𝗴<br>
+✅Authentication logs<br>
+✅Security event logs<br>
+✅Failed login tracking<br>
+✅Suspicious activity detection<br>
