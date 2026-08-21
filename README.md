@@ -74,4 +74,4 @@ Block wifi connection, Hijack Social account, Hijack Banking Financial account, 
 #
 ## 📸 PROJECT HUB 
 
-![Dashboard](Screenshot_20260729-232013.png)
+![Dashboard](Screenshot_20260804-220130.png)
