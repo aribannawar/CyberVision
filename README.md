@@ -122,6 +122,11 @@ Block wifi connection, Hijack Social account, Hijack Banking Financial account, 
 
 ✓ 𝙂𝙤𝙤𝙜𝙡𝙚-𝙨𝙞𝙜𝙣-𝙞𝙣 𝘼𝙪𝙩𝙝𝙚𝙣𝙩𝙞𝙘𝙖𝙩𝙞𝙤𝙣 𝙛𝙚𝙖𝙩𝙪𝙧𝙚𝙨🪪<br> ✓ 𝙇𝙞𝙣𝙠𝙚𝙙 𝙩𝙤 𝙂𝙤𝙤𝙜𝙡𝙚 𝘾𝙡𝙤𝙪𝙙 𝙋𝙧𝙤𝙟𝙚𝙘𝙩☁️<br>
 ✓  𝙈𝙤𝙧𝙚 𝙐𝙨𝙚𝙧 𝙥𝙧𝙞𝙫𝙖𝙘𝙮 𝙖𝙙𝙙𝙚𝙙 𝙬𝙞𝙩𝙝 𝙂𝙤𝙤𝙜𝙡𝙚 𝘼𝙪𝙩𝙝𝙚𝙣𝙩𝙞𝙘𝙖𝙩𝙞𝙤𝙣 🔏 <br>
+#
+## 📸 Authentication 
+
+![Dashboard](Screenshot_20260801-000457.png)
+#
 🛡️𝙎𝙚𝙘𝙪𝙧𝙞𝙩𝙮 𝙝𝙚𝙖𝙙𝙚𝙧𝙨<br>
 ✅ Content Security Policy (CSP)<br>
 ✅ X-Frame-Options<br>
